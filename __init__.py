@@ -1,5 +1,5 @@
 
-m nltk import pos_tag, ne_chunk
+import nltk import pos_tag, ne_chunk
 import nltk
 import re
 from collections import Counter
