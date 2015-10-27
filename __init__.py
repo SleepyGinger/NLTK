@@ -1,5 +1,4 @@
-
-import nltk import pos_tag, ne_chunk
+from nltk import pos_tag, ne_chunk
 import nltk
 import re
 from collections import Counter
@@ -56,3 +55,5 @@ class NL(object):
         facility=[' '.join(map(lambda x: x[0], ne.leaves())) for ne in facility_raw if isinstance(ne, nltk.tree.Tree)]
         top_facilities=[Counter(facility).most_common(10)]
         return top_facilities[0]
+
+print NL('we have a good sentence here John F Kennedy. He must have been the bestest president in the USA. Ball tree chair').noun()
